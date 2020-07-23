@@ -6,7 +6,6 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  pageName = "login"
-  maleSelected: boolean = true
-  feMaleSelected: boolean = false
+  userType = "customer"
+  
 }

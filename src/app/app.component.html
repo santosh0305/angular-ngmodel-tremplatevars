@@ -1,9 +1,10 @@
 <div>
-  <input type=text [(ngModel)]=pageName >
-</div>
-<div>
-  <input type="radio" name=gender #male [(ngModel)]=maleSelected >Male
-  <input type="radio" name=gender #female [(ngModel)]=feMaleSelected>Female
+  <input type=text [(ngModel)]=userType >
 </div>
 
-{{female.value}}
+<div *ngIf="userType == 'customer'">
+  User is customer
+</div>
+<div *ngIf="userType != 'customer'">
+  User is Admin
+</div>
