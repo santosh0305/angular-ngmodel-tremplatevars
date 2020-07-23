@@ -1,10 +1,30 @@
-<div>
-  <input type=text [(ngModel)]=userType >
+<div #myDiv id=div1>
+  <input type="text" [(ngModel)]=welcome #textInput >
+  <br>
+  {{welcome}}
+</div>
+{{myDiv.id}}
+{{textInput.type}}
+{{textInput.value}}
+
+<div class="appHighlighter">
+  this is simple directive
 </div>
 
-<div *ngIf="userType == 'customer'">
-  User is customer
+<div *ngIf="isAdmin">
+  yes he is admin
 </div>
-<div *ngIf="userType != 'customer'">
-  User is Admin
+
+<!-- <div #otherUser>
+  he is not admin
+</div> -->
+
+<div *ngFor="let country of countries; let i = index">
+  {{i}} - {{country}}
 </div>
+<br>
+<ul *ngFor="let country of countries; let i = index">
+  <li>
+    {{i}} - {{country}}
+  </li>
+</ul>
